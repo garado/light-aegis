@@ -15,7 +15,7 @@ def getCmdOutput = { cmd ->
 def getGitHash = { -> return getCmdOutput(["git", "rev-parse", "--short", "HEAD"]) }
 def getGitBranch = { -> return getCmdOutput(["git", "rev-parse", "--abbrev-ref", "HEAD"]) }
 
-def packageName = "com.beemdevelopment.aegis"
+def packageName = "com.garado.aegis"
 def fileProviderAuthority = "${packageName}.fileprovider"
 def fileProviderAuthorityDebug = "${packageName}.debug.fileprovider"
 
@@ -29,7 +29,7 @@ android {
         minSdkVersion 23
         targetSdkVersion 35
         versionCode 81
-        versionName "3.4.2"
+        versionName "3.4.2-light1"
         multiDexEnabled true
         buildConfigField "String", "GIT_HASH", "\"${getGitHash()}\""
         buildConfigField "String", "GIT_BRANCH", "\"${getGitBranch()}\""
@@ -41,7 +41,7 @@ android {
             }
         }
 
-        testInstrumentationRunner "com.beemdevelopment.aegis.AegisTestRunner"
+        testInstrumentationRunner "com.garado.aegis.AegisTestRunner"
         testInstrumentationRunnerArguments clearPackageData: 'true'
     }
 
