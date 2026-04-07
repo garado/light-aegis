@@ -32,6 +32,7 @@ public class LightButton extends LightText {
         setEllipsize(android.text.TextUtils.TruncateAt.END);
         setClickable(true);
         setFocusable(true);
+        setBackground(null);
 
         setOnClickListener(v -> performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY));
 
