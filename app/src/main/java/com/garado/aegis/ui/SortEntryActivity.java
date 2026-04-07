@@ -2,10 +2,11 @@ package com.garado.aegis.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 
 import com.garado.aegis.R;
 import com.garado.aegis.SortCategory;
-import com.garado.aegis.ui.components.light.LightHeader;
+import com.garado.aegis.helpers.ViewHelper;
 import com.garado.aegis.ui.components.light.LightOptionGroup;
 
 public class SortEntryActivity extends AegisActivity {
@@ -16,9 +17,13 @@ public class SortEntryActivity extends AegisActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sort_entry);
+        setSupportActionBar(findViewById(R.id.toolbar));
+        ViewHelper.setupAppBarInsets(findViewById(R.id.app_bar_layout));
 
-        LightHeader header = findViewById(R.id.lightHeader);
-        header.setOnBackPressedListener(this::finish);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            setTitle(R.string.sort);
+        }
 
         LightOptionGroup group = findViewById(R.id.sort_option_group);
 
@@ -49,5 +54,14 @@ public class SortEntryActivity extends AegisActivity {
             setResult(RESULT_OK, result);
             finish();
         });
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
