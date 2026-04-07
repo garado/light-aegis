@@ -27,7 +27,7 @@ public class LightButton extends LightText {
     public LightButton(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
 
-        setTextSize(TypedValue.COMPLEX_UNIT_SP, 24);
+        setTextSize(TypedValue.COMPLEX_UNIT_SP, 26);
         setSingleLine(true);
         setEllipsize(android.text.TextUtils.TruncateAt.END);
         setClickable(true);

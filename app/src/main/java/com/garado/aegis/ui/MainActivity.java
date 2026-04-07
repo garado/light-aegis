@@ -56,6 +56,7 @@ import com.garado.aegis.icons.IconType;
 import com.garado.aegis.otp.GoogleAuthInfo;
 import com.garado.aegis.otp.GoogleAuthInfoException;
 import com.garado.aegis.otp.OtpInfoException;
+import com.garado.aegis.ui.AddEntryActivity;
 import com.garado.aegis.ui.dialogs.Dialogs;
 import com.garado.aegis.ui.fragments.preferences.BackupsPreferencesFragment;
 import com.garado.aegis.ui.fragments.preferences.PreferencesFragment;
@@ -182,6 +183,18 @@ public class MainActivity extends AegisActivity implements EntryListView.Listene
                 onAddEntryResult(activityResult.getData());
             });
 
+    private final ActivityResultLauncher<Intent> addEntryMenuResultLauncher =
+            registerForActivityResult(new StartActivityForResult(), activityResult -> {
+                int code = activityResult.getResultCode();
+                if (code == AddEntryActivity.RESULT_SCAN) {
+                    startScanActivity();
+                } else if (code == AddEntryActivity.RESULT_SCAN_IMAGE) {
+                    startScanImageActivity();
+                } else if (code == AddEntryActivity.RESULT_ENTER) {
+                    startEditEntryActivity();
+                }
+            });
+
     private final ActivityResultLauncher<Intent> codeScanResultLauncher =
             registerForActivityResult(new StartActivityForResult(), activityResult -> {
                 if (activityResult.getResultCode() == RESULT_OK && activityResult.getData() != null) {
@@ -258,7 +271,7 @@ public class MainActivity extends AegisActivity implements EntryListView.Listene
         _fabMenuHelper = new FabMenuHelper(scrimOverlay, menuItemsContainer, fab, actions);
         _fabMenuHelper.setOnFabMenuStateChangeListener(_fabMenuBackPressHandler::setEnabled);
 
-        findViewById(R.id.nav_add).setOnClickListener(v -> _fabMenuHelper.toggle());
+        findViewById(R.id.nav_add).setOnClickListener(v -> addEntryMenuResultLauncher.launch(new Intent(this, AddEntryActivity.class)));
 
         _groupChip = findViewById(R.id.groupChipGroup);
         _selectedEntries = new ArrayList<>();
