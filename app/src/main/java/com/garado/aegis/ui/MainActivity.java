@@ -57,6 +57,7 @@ import com.garado.aegis.otp.GoogleAuthInfo;
 import com.garado.aegis.otp.GoogleAuthInfoException;
 import com.garado.aegis.otp.OtpInfoException;
 import com.garado.aegis.ui.AddEntryActivity;
+import com.garado.aegis.ui.SortEntryActivity;
 import com.garado.aegis.ui.dialogs.Dialogs;
 import com.garado.aegis.ui.fragments.preferences.BackupsPreferencesFragment;
 import com.garado.aegis.ui.fragments.preferences.PreferencesFragment;
@@ -183,6 +184,17 @@ public class MainActivity extends AegisActivity implements EntryListView.Listene
                 onAddEntryResult(activityResult.getData());
             });
 
+    private final ActivityResultLauncher<Intent> sortEntryResultLauncher =
+            registerForActivityResult(new StartActivityForResult(), activityResult -> {
+                if (activityResult.getResultCode() != RESULT_OK || activityResult.getData() == null) {
+                    return;
+                }
+                int ordinal = activityResult.getData().getIntExtra(SortEntryActivity.EXTRA_SORT_CATEGORY, SortCategory.CUSTOM.ordinal());
+                SortCategory sortCategory = SortCategory.fromInteger(ordinal);
+                _entryListView.setSortCategory(sortCategory, true);
+                _prefs.setCurrentSortCategory(sortCategory);
+            });
+
     private final ActivityResultLauncher<Intent> addEntryMenuResultLauncher =
             registerForActivityResult(new StartActivityForResult(), activityResult -> {
                 int code = activityResult.getResultCode();
@@ -271,6 +283,11 @@ public class MainActivity extends AegisActivity implements EntryListView.Listene
         _fabMenuHelper = new FabMenuHelper(scrimOverlay, menuItemsContainer, fab, actions);
         _fabMenuHelper.setOnFabMenuStateChangeListener(_fabMenuBackPressHandler::setEnabled);
 
+        findViewById(R.id.nav_sort).setOnClickListener(v -> {
+            Intent intent = new Intent(this, SortEntryActivity.class);
+            intent.putExtra(SortEntryActivity.EXTRA_SORT_CATEGORY, _prefs.getCurrentSortCategory().ordinal());
+            sortEntryResultLauncher.launch(intent);
+        });
         findViewById(R.id.nav_add).setOnClickListener(v -> addEntryMenuResultLauncher.launch(new Intent(this, AddEntryActivity.class)));
 
         _groupChip = findViewById(R.id.groupChipGroup);

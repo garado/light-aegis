@@ -89,6 +89,7 @@
         <activity android:name=".ui.LicensesActivity"
             android:label="@string/title_activity_licenses"/>
         <activity android:name=".ui.AddEntryActivity" />
+        <activity android:name=".ui.SortEntryActivity" />
         <activity
             android:name=".ui.PanicResponderActivity"
             android:exported="true"

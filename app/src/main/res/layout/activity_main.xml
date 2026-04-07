@@ -82,6 +82,15 @@
                     android:background="?attr/selectableItemBackgroundBorderless" />
 
                 <ImageButton
+                    android:id="@+id/nav_sort"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_outline_sort_24"
+                    android:padding="10dp"
+                    android:background="?attr/selectableItemBackgroundBorderless" />
+
+                <ImageButton
                     android:id="@+id/nav_add"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
