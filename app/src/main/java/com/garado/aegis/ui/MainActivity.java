@@ -258,8 +258,9 @@ public class MainActivity extends AegisActivity implements EntryListView.Listene
         _fabMenuHelper = new FabMenuHelper(scrimOverlay, menuItemsContainer, fab, actions);
         _fabMenuHelper.setOnFabMenuStateChangeListener(_fabMenuBackPressHandler::setEnabled);
 
+        findViewById(R.id.nav_add).setOnClickListener(v -> _fabMenuHelper.toggle());
+
         _groupChip = findViewById(R.id.groupChipGroup);
-        _fabScrollHelper = new FabScrollHelper(fab);
         _selectedEntries = new ArrayList<>();
     }
 
@@ -1328,13 +1329,10 @@ public class MainActivity extends AegisActivity implements EntryListView.Listene
 
     @Override
     public void onScroll(int dx, int dy) {
-        if (!_isDPadPressed) {
-            _fabScrollHelper.onScroll(dx, dy);
-        }
     }
 
     @Override
-    public void onListChange() { _fabScrollHelper.setVisible(true); }
+    public void onListChange() { }
 
     @Override
     public void onSaveGroupFilter(Set<UUID> groupFilter) {
