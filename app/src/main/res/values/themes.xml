@@ -217,6 +217,21 @@
     <style name="ThemeOverlay.Aegis.Preference" parent="@style/PreferenceThemeOverlay">
         <item name="android:tint">?attr/colorOnSurface</item>
         <item name="switchPreferenceCompatStyle">@style/Preference.Aegis.SwitchPreference</item>
+        <item name="preferenceStyle">@style/Preference.Aegis</item>
+        <item name="android:divider">@null</item>
+        <item name="android:dividerHeight">0dp</item>
+    </style>
+
+    <style name="TextAppearance.Aegis.Toolbar.Title" parent="@style/TextAppearance.Material3.TitleLarge">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Preference.Aegis" parent="@style/Preference.Material">
+        <item name="android:paddingStart">26dp</item>
+        <item name="android:paddingEnd">26dp</item>
+        <item name="iconSpaceReserved">false</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
     </style>
 
     <style name="Preference.Aegis.SwitchPreference" parent="@style/Preference.SwitchPreferenceCompat.Material">
