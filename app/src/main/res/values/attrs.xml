@@ -20,4 +20,53 @@
     <declare-styleable name="DropdownCheckBoxes">
         <attr name="allow_filtering" format="boolean" />
     </declare-styleable>
+
+    <!-- Light OS components -->
+    <attr name="lightText" format="string" />
+    <attr name="lightSelected" format="boolean" />
+    <attr name="lightLabel" format="string" />
+    <attr name="lightValue" format="string" />
+    <attr name="lightHint" format="string" />
+    <attr name="lightAutoFocus" format="boolean" />
+    <attr name="lightTitle" format="string" />
+    <attr name="lightHideBackButton" format="boolean" />
+    <attr name="lightChecked" format="boolean" />
+    <attr name="lightContentGap" format="dimension" />
+    <attr name="lightWideContent" format="boolean" />
+
+    <declare-styleable name="LightButton">
+        <attr name="lightSelected" />
+    </declare-styleable>
+    
+    <declare-styleable name="LightConfirmButton">
+        <attr name="lightSelected" />
+    </declare-styleable>
+
+    <declare-styleable name="LightTextInput">
+        <attr name="lightHint" />
+        <attr name="lightAutoFocus" />
+    </declare-styleable>
+
+    <declare-styleable name="LightToggleSwitch">
+        <attr name="lightLabel" />
+        <attr name="lightValue" />
+        <attr name="lightChecked" />
+    </declare-styleable>
+
+    <declare-styleable name="LightHeader">
+        <attr name="lightTitle" />
+        <attr name="lightHideBackButton" />
+    </declare-styleable>
+
+    <declare-styleable name="LightSelectorButton">
+        <attr name="lightLabel" />
+        <attr name="lightValue" />
+    </declare-styleable>
+
+    <declare-styleable name="LightContentContainer">
+        <attr name="lightTitle" />
+        <attr name="lightHideBackButton" />
+        <attr name="lightContentGap" />
+        <attr name="lightWideContent" />
+    </declare-styleable>
 </resources>
