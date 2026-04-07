@@ -46,41 +46,11 @@
             </LinearLayout>
         </HorizontalScrollView>
 
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            app:contentInsetStart="0dp"
-            app:title=""> <LinearLayout
+        <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
                 android:gravity="center">
-
-                <ImageButton
-                    android:id="@+id/nav_home"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:src="@drawable/ic_outline_menu_24"
-                    android:background="?attr/selectableItemBackgroundBorderless" />
-
-                <ImageButton
-                    android:id="@+id/nav_search"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:src="@drawable/ic_outline_menu_24"
-                    android:background="?attr/selectableItemBackgroundBorderless" />
-
-                <ImageButton
-                    android:id="@+id/nav_settings"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:src="@drawable/ic_outline_menu_24"
-                    android:background="?attr/selectableItemBackgroundBorderless" />
-
                 <ImageButton
                     android:id="@+id/nav_sort"
                     android:layout_width="0dp"
@@ -98,9 +68,14 @@
                     android:src="@drawable/ic_outline_add_24"
                     android:background="?attr/selectableItemBackgroundBorderless" />
 
+                <ImageButton
+                    android:id="@+id/nav_settings"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_outline_menu_24"
+                    android:background="?attr/selectableItemBackgroundBorderless" />
             </LinearLayout>
-
-        </com.google.android.material.appbar.MaterialToolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
 

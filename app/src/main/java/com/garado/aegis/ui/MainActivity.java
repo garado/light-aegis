@@ -283,6 +283,7 @@ public class MainActivity extends AegisActivity implements EntryListView.Listene
         _fabMenuHelper = new FabMenuHelper(scrimOverlay, menuItemsContainer, fab, actions);
         _fabMenuHelper.setOnFabMenuStateChangeListener(_fabMenuBackPressHandler::setEnabled);
 
+        findViewById(R.id.nav_settings).setOnClickListener(v -> startPreferencesActivity());
         findViewById(R.id.nav_sort).setOnClickListener(v -> {
             Intent intent = new Intent(this, SortEntryActivity.class);
             intent.putExtra(SortEntryActivity.EXTRA_SORT_CATEGORY, _prefs.getCurrentSortCategory().ordinal());

@@ -46,4 +46,8 @@
         app:title="@string/pref_section_audit_log_title"
         app:summary="@string/pref_section_audit_log_summary" />
 
+    <Preference
+        android:key="pref_about"
+        android:title="@string/action_about" />
+
 </androidx.preference.PreferenceScreen>
