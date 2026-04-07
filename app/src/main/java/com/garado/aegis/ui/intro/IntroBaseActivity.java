@@ -15,6 +15,7 @@ import androidx.viewpager2.widget.ViewPager2;
 import com.garado.aegis.R;
 import com.garado.aegis.helpers.AnimationsHelper;
 import com.garado.aegis.ui.AegisActivity;
+import com.garado.aegis.ui.components.light.LightHeader;
 import com.google.android.material.button.MaterialButton;
 
 import java.lang.ref.WeakReference;
@@ -31,6 +32,7 @@ public abstract class IntroBaseActivity extends AegisActivity implements IntroAc
     private MaterialButton _btnPrevious;
     private MaterialButton _btnNext;
     private SlideIndicator _slideIndicator;
+    private LightHeader _lightHeader;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +48,10 @@ public abstract class IntroBaseActivity extends AegisActivity implements IntroAc
         _btnNext = findViewById(R.id.btnNext);
         _btnNext.setOnClickListener(v -> goToNextSlide());
         _slideIndicator = findViewById(R.id.slideIndicator);
+
+        _lightHeader = findViewById(R.id.lightHeader);
+        _lightHeader.setOnBackPressedListener(() -> goToPreviousSlide());
+        findViewById(R.id.btnLightNext).setOnClickListener(v -> goToNextSlide());
 
         _adapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
         _pager = findViewById(R.id.pager);
@@ -79,6 +85,7 @@ public abstract class IntroBaseActivity extends AegisActivity implements IntroAc
     @Override
     public void goToNextSlide() {
         int pos = _pager.getCurrentItem();
+        android.util.Log.d("INTRO", "goToNextSlide pos=" + _pager.getCurrentItem());
         if (pos != _slides.size() - 1) {
             SlideFragment currentSlide = _currentSlide.get();
             if (currentSlide.isFinished()) {
@@ -153,15 +160,9 @@ public abstract class IntroBaseActivity extends AegisActivity implements IntroAc
 
     private void updatePagerControls() {
         int pos = _pager.getCurrentItem();
-        _btnPrevious.setVisibility(
-                pos != 0 && pos != _slides.size() - 1
-                        ? View.VISIBLE
-                        : View.INVISIBLE);
-        if (pos == _slides.size() - 1) {
-            _btnNext.setIconResource(R.drawable.ic_outline_check_24);
-        }
         _slideIndicator.setSlideCount(_slides.size());
         _slideIndicator.setCurrentSlide(pos);
+        _lightHeader.setHideBackButton(pos == 0);
     }
 
     @NonNull

@@ -57,6 +57,7 @@ public class IntroActivity extends IntroBaseActivity {
         if (oldSlide == WelcomeSlide.class
                 && newSlide == SecurityPickerSlide.class
                 && getState().getBoolean("imported")) {
+            android.util.Log.d("INTRO", "skipping to DoneSlide, imported=" + getState().getBoolean("imported"));
             skipToSlide(DoneSlide.class);
             return true;
         }
@@ -125,6 +126,7 @@ public class IntroActivity extends IntroBaseActivity {
         // skip the intro from now on
         _prefs.setIntroDone(true);
 
+        android.util.Log.d("INTRO", "onDonePressed finishing");
         setResult(RESULT_OK);
         finish();
     }

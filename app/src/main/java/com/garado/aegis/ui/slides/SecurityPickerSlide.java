@@ -4,10 +4,9 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.TextView;
 import android.widget.Toast;
+import com.garado.aegis.ui.components.light.LightOptionGroup;
+import com.garado.aegis.ui.components.light.LightSelectorButton;
 
 import androidx.annotation.NonNull;
 
@@ -21,16 +20,14 @@ public class SecurityPickerSlide extends SlideFragment {
     public static final int CRYPT_TYPE_PASS = 2;
     public static final int CRYPT_TYPE_BIOMETRIC = 3;
 
-    private RadioGroup _buttonGroup;
-    private RadioButton _bioButton;
-    private TextView _bioText;
+    private LightOptionGroup _buttonGroup;
+    private View _bioButton;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_security_picker_slide, container, false);
         _buttonGroup = view.findViewById(R.id.rg_authenticationMethod);
         _bioButton = view.findViewById(R.id.rb_biometrics);
-        _bioText = view.findViewById(R.id.text_rb_biometrics);
         updateBiometricsOption(true);
         return view;
     }
@@ -48,7 +45,6 @@ public class SecurityPickerSlide extends SlideFragment {
     private void updateBiometricsOption(boolean autoSelect) {
         boolean canUseBio = BiometricsHelper.isAvailable(requireContext());
         _bioButton.setEnabled(canUseBio);
-        _bioText.setEnabled(canUseBio);
 
         if (!canUseBio && _buttonGroup.getCheckedRadioButtonId() == R.id.rb_biometrics) {
             _buttonGroup.check(R.id.rb_password);

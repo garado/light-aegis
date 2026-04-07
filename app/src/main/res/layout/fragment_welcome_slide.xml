@@ -4,21 +4,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="32dp">
+    android:paddingLeft="32dp"
+    android:paddingRight="32dp">
 
-    <TextView
+    <com.garado.aegis.ui.components.light.LightText
         android:id="@+id/titleText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/welcome"
         android:textAlignment="center"
-        android:textSize="24sp"
-        android:layout_marginTop="30dp"
-        android:textStyle="bold"
+        android:textSize="26sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
+    <com.garado.aegis.ui.components.light.LightText
         android:id="@+id/descriptionText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -30,18 +29,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titleText" />
 
-    <ImageView
-        android:id="@+id/imgLogo"
-        android:layout_width="210dp"
-        android:layout_height="210dp"
-        android:layout_marginTop="60dp"
-        android:adjustViewBounds="true"
-        android:src="@drawable/app_icon"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/descriptionText"/>
-
-    <Button
+    <com.garado.aegis.ui.components.light.LightButton
         android:id="@+id/btnImport"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -52,9 +40,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/txtImportHelp"
-        style="@style/Widget.Material3.Button.TonalButton" />
+        />
 
-    <TextView
+    <com.garado.aegis.ui.components.light.LightText
         android:id="@+id/txtImportHelp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

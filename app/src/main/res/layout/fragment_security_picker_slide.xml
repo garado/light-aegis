@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -9,82 +10,52 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="32dp">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/choose_authentication_method"
-            android:textAlignment="center"
-            android:textSize="24sp"
-            android:layout_marginTop="30dp"
-            android:textStyle="bold" />
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="24dp"
             android:orientation="vertical">
 
-            <TextView
+            <com.garado.aegis.ui.components.light.LightText
+                android:textSize="16sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/authentication_method_explanation"/>
 
-            <RadioGroup
+            <com.garado.aegis.ui.components.light.LightOptionGroup
                 android:id="@+id/rg_authenticationMethod"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp">
 
-                <RadioButton
+                <com.garado.aegis.ui.components.light.LightToggleSwitch
                     android:id="@+id/rb_none"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/authentication_method_none"
-                    android:textSize="16sp" />
+                    app:lightValue="@string/authentication_method_none"
+                    app:lightLabel="@string/authentication_method_none_description" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="-5dp"
-                    android:text="@string/authentication_method_none_description" />
-
-                <RadioButton
+                <com.garado.aegis.ui.components.light.LightToggleSwitch
                     android:id="@+id/rb_password"
+                    android:layout_marginTop="12dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:checked="true"
-                    android:text="@string/authentication_method_password"
-                    android:textSize="16sp" />
+                    app:lightValue="@string/authentication_method_password"
+                    app:lightLabel="@string/authentication_method_password_description" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="-5dp"
-                    android:text="@string/authentication_method_password_description" />
-
-                <RadioButton
+                <com.garado.aegis.ui.components.light.LightToggleSwitch
                     android:id="@+id/rb_biometrics"
+                    android:layout_marginTop="12dp"
                     android:enabled="false"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/authentication_method_biometrics"
-                    android:textSize="16sp" />
+                    app:lightValue="@string/authentication_method_biometrics"
+                    app:lightLabel="@string/authentication_method_biometrics_description" />
 
-                <TextView
-                    android:id="@+id/text_rb_biometrics"
-                    android:enabled="false"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="-5dp"
-
-                    android:text="@string/authentication_method_biometrics_description" />
-
-            </RadioGroup>
+            </com.garado.aegis.ui.components.light.LightOptionGroup>
 
         </LinearLayout>
 

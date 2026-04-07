@@ -11,7 +11,7 @@ import android.text.method.PasswordTransformationMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CheckBox;
+import com.garado.aegis.ui.components.light.LightToggleSwitch;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -42,7 +42,7 @@ import javax.crypto.SecretKey;
 public class SecuritySetupSlide extends SlideFragment {
     private EditText _textPassword;
     private EditText _textPasswordConfirm;
-    private CheckBox _checkPasswordVisibility;
+    private LightToggleSwitch _checkPasswordVisibility;
     private ProgressBar _barPasswordStrength;
     private TextView _textPasswordStrength;
     private TextInputLayout _textPasswordWrapper;
@@ -60,7 +60,7 @@ public class SecuritySetupSlide extends SlideFragment {
         _textPasswordStrength = view.findViewById(R.id.text_password_strength);
         _textPasswordWrapper = view.findViewById(R.id.text_password_wrapper);
 
-        _checkPasswordVisibility.setOnCheckedChangeListener((buttonView, isChecked) -> {
+        _checkPasswordVisibility.setOnCheckedChangeListener(isChecked -> {
             if (isChecked) {
                 _textPassword.setTransformationMethod(null);
                 _textPasswordConfirm.setTransformationMethod(null);

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -9,25 +10,13 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="32dp">
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp">
 
-        <TextView
-            android:id="@+id/textView2"
+        <com.garado.aegis.ui.components.light.LightText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/choose_authentication_method"
-            android:textAlignment="center"
-            android:textSize="24sp"
-            android:layout_marginTop="30dp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/authentication_method_password_explanation"
-            android:textColor="?attr/colorError"
-            android:textStyle="bold"
-            android:layout_marginTop="24dp" />
+            android:text="@string/authentication_method_password_explanation" />
 
         <LinearLayout
             android:orientation="vertical"
@@ -72,18 +61,18 @@
                 android:max="4"
                 android:paddingStart="4dp"
                 android:paddingEnd="3.5dp" />
-            <TextView
+            <com.garado.aegis.ui.components.light.LightText
                 android:id="@+id/text_password_strength"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end" />
 
-            <CheckBox
+            <com.garado.aegis.ui.components.light.LightToggleSwitch
                 android:id="@+id/check_toggle_visibility"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="@string/show_password" />
+                app:lightValue="@string/show_password" />
 
         </LinearLayout>
 
