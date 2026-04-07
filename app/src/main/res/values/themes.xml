@@ -60,7 +60,7 @@
         <!-- Custom colors -->
         <item name="colorFavorite">@color/aegis_theme_all_favorite</item>
         <item name="colorPrimaryAlternative">?attr/colorPrimary</item>
-        <item name="colorProgressbar">?attr/colorPrimaryAlternative</item>
+        <item name="colorProgressbar">?attr/colorOnBackground</item>
         <item name="colorOnDark">@android:color/white</item>
         <item name="colorSuccess">@color/aegis_theme_light_success</item>
         <item name="colorOnSurfaceDim">@color/aegis_theme_light_onSurfaceDim</item>
@@ -171,7 +171,7 @@
         <item name="colorSurfaceBright">#000000</item>
         <item name="colorCode">@android:color/white</item>
         <item name="colorCodeHidden">#2F2F2F</item>
-        <item name="colorProgressbar">@android:color/white</item>
+        <item name="colorProgressbar">?attr/colorOnBackground</item>
     </style>
 
     <style name="ThemeOverlay.Aegis.Dynamic.Dark" parent="ThemeOverlay.Material3.DynamicColors.Dark">
@@ -192,7 +192,7 @@
         <item name="colorSurfaceBright">#000000</item>
         <item name="colorCode">@android:color/white</item>
         <item name="colorCodeHidden">#2F2F2F</item>
-        <item name="colorProgressbar">@android:color/white</item>
+        <item name="colorProgressbar">?attr/colorOnBackground</item>
     </style>
 
     <style name="Theme.Aegis.Light" parent="Base.Theme.Aegis.Light">
@@ -225,6 +225,8 @@
 
     <style name="Widget.Aegis.EntryCardView" parent="Widget.Material3.CardView.Elevated">
         <item name="materialThemeOverlay">@style/ThemeOverlay.Aegis.EntryCardView</item>
+        <item name="cardBackgroundColor">@android:color/transparent</item>
+        <item name="cardElevation">0dp</item>
     </style>
 
     <style name="Widget.Aegis.CompactEntryCardView" parent="Widget.Material3.CardView.Elevated">
@@ -241,6 +243,8 @@
 
     <style name="Widget.Aegis.ErrorCardView" parent="Widget.Material3.CardView.Filled">
         <item name="materialThemeOverlay">@style/ThemeOverlay.Aegis.ErrorCardView</item>
+        <item name="cardBackgroundColor">@android:color/transparent</item>
+        <item name="cardElevation">0dp</item>
     </style>
 
     <style name="ThemeOverlay.Aegis.ErrorCardView" parent="">
