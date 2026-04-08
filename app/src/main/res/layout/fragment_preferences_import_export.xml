@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="28dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp">
+
+        <com.garado.aegis.ui.components.light.LightButton
+            android:id="@+id/pref_import"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pref_import_file_title" />
+
+        <com.garado.aegis.ui.components.light.LightButton
+            android:id="@+id/pref_import_app"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/pref_import_app_title" />
+
+        <com.garado.aegis.ui.components.light.LightButton
+            android:id="@+id/pref_export"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/pref_export_title" />
+
+        <com.garado.aegis.ui.components.light.LightButton
+            android:id="@+id/pref_google_auth_style_export"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/pref_google_auth_export_title" />
+
+    </LinearLayout>
+
+</ScrollView>

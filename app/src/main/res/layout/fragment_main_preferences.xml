@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="28dp"
+        android:paddingBottom="16dp">
+
+        <com.garado.aegis.ui.components.light.LightButton
+            android:id="@+id/pref_appearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pref_section_appearance_title" />
+
+        <com.garado.aegis.ui.components.light.LightButton
+            android:id="@+id/pref_behavior"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/pref_section_behavior_title" />
+
+        <com.garado.aegis.ui.components.light.LightButton
+            android:visibility="gone"
+            android:id="@+id/pref_icon_packs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/pref_section_icon_packs" />
+
+        <com.garado.aegis.ui.components.light.LightButton
+            android:id="@+id/pref_security"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/pref_section_security_title" />
+
+        <com.garado.aegis.ui.components.light.LightButton
+            android:id="@+id/pref_backups"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/pref_section_backups_title" />
+
+        <com.garado.aegis.ui.components.light.LightButton
+            android:id="@+id/pref_import_export"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/pref_section_import_export_title" />
+
+        <com.garado.aegis.ui.components.light.LightButton
+            android:id="@+id/pref_audit_log"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/pref_section_audit_log_title" />
+
+        <com.garado.aegis.ui.components.light.LightButton
+            android:id="@+id/pref_about"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/action_about" />
+
+    </LinearLayout>
+
+</ScrollView>

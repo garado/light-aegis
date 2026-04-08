@@ -48,7 +48,7 @@
 
         <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="50dp"
                 android:orientation="horizontal"
                 android:gravity="center">
                 <ImageButton
@@ -57,7 +57,9 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:src="@drawable/ic_outline_sort_24"
-                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
                     android:background="@null" />
 
                 <ImageButton
@@ -66,6 +68,9 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:src="@drawable/ic_outline_add_24"
+                    android:scaleType="fitCenter"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
                     android:background="@null" />
 
                 <ImageButton
@@ -74,6 +79,9 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:src="@drawable/ic_outline_menu_24"
+                    android:scaleType="fitCenter"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
                     android:background="@null" />
             </LinearLayout>
 

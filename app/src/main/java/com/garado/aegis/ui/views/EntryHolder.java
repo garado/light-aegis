@@ -101,6 +101,12 @@ public class EntryHolder extends RecyclerView.ViewHolder {
 
         _progressBar = view.findViewById(R.id.progressBar);
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            android.graphics.Typeface variableFont = androidx.core.content.res.ResourcesCompat.getFont(view.getContext(), R.font.public_sans_variable);
+            _profileCode.setTypeface(variableFont);
+            _profileCode.setFontVariationSettings("'wght' 250");
+        }
+
         _scaleIn = AnimationsHelper.loadScaledAnimation(view.getContext(), R.anim.item_scale_in);
         _scaleOut = AnimationsHelper.loadScaledAnimation(view.getContext(), R.anim.item_scale_out);
 

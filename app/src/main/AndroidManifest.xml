@@ -30,20 +30,24 @@
         android:label="Aegis"
         android:supportsRtl="true"
         android:largeHeap="true"
-        android:theme="@style/Theme.Aegis.Launch"
+        android:theme="@style/Theme.Aegis.Amoled"
         tools:targetApi="tiramisu">
         <activity android:name=".ui.TransferEntriesActivity"
-            android:label="@string/title_activity_transfer" />
+            android:label="@string/title_activity_transfer"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.AboutActivity"
-            android:label="@string/title_activity_about" />
+            android:label="@string/title_activity_about"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.ImportEntriesActivity"
-            android:label="@string/title_activity_import_entries" />
+            android:label="@string/title_activity_import_entries"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.MainActivity"
             android:exported="true"
-            android:label="${title}">
+            android:label="${title}"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -72,24 +76,32 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.EditEntryActivity"
-            android:label="@string/title_activity_edit_entry" />
+            android:label="@string/title_activity_edit_entry"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.IntroActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.AuthActivity" />
+            android:name=".ui.AuthActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.PreferencesActivity"
-            android:label="@string/title_activity_preferences" />
+            android:label="@string/title_activity_preferences"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.GroupManagerActivity"
-            android:label="@string/title_activity_manage_groups" />
+            android:label="@string/title_activity_manage_groups"
+            android:screenOrientation="portrait" />
         <activity android:name=".ui.AssignIconsActivity"
-            android:label="@string/title_activity_assign_icons"/>
+            android:label="@string/title_activity_assign_icons"
+            android:screenOrientation="portrait" />
         <activity android:name=".ui.LicensesActivity"
-            android:label="@string/title_activity_licenses"/>
-        <activity android:name=".ui.AddEntryActivity" />
-        <activity android:name=".ui.SortEntryActivity" />
+            android:label="@string/title_activity_licenses"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.AddEntryActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.SortEntryActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.PanicResponderActivity"
             android:exported="true"

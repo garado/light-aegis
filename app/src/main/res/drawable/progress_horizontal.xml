@@ -3,11 +3,7 @@
         <scale android:scaleWidth="100%">
             <shape>
                 <solid android:color="?attr/colorProgressbar"/>
-                <corners
-                    android:topLeftRadius="0dp"
-                    android:topRightRadius="2dp"
-                    android:bottomLeftRadius="0dp"
-                    android:bottomRightRadius="2dp" />
+                <corners android:radius="0dp" />
             </shape>
         </scale>
     </item>

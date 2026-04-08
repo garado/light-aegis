@@ -60,7 +60,7 @@ import com.garado.aegis.ui.AddEntryActivity;
 import com.garado.aegis.ui.SortEntryActivity;
 import com.garado.aegis.ui.dialogs.Dialogs;
 import com.garado.aegis.ui.fragments.preferences.BackupsPreferencesFragment;
-import com.garado.aegis.ui.fragments.preferences.PreferencesFragment;
+import androidx.fragment.app.Fragment;
 import com.garado.aegis.ui.models.ErrorCardInfo;
 import com.garado.aegis.ui.models.VaultGroupModel;
 import com.garado.aegis.ui.tasks.IconOptimizationTask;
@@ -859,7 +859,7 @@ public class MainActivity extends AegisActivity implements EntryListView.Listene
         startPreferencesActivity(null, null);
     }
 
-    private void startPreferencesActivity(Class<? extends PreferencesFragment> fragmentType, String preference) {
+    private void startPreferencesActivity(Class<? extends Fragment> fragmentType, String preference) {
         Intent intent = new Intent(this, PreferencesActivity.class);
         intent.putExtra("fragment", fragmentType);
         intent.putExtra("pref", preference);

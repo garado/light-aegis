@@ -28,7 +28,6 @@
             android:backgroundTint="?attr/colorFavorite"
             android:background="@drawable/favorite_indicator" />
 
-
         <!-- thumbnail (hidden with visibility=gone) -->
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -81,7 +80,7 @@
                     android:id="@+id/profile_issuer"
                     android:text="@string/issuer"
                     android:includeFontPadding="false"
-                    android:textSize="20sp"
+                    style="@style/TextSize.Light.XS"
                     android:ellipsize="end"
                     android:maxLines="1"/>
 
@@ -93,7 +92,7 @@
                     android:ellipsize="end"
                     android:includeFontPadding="false"
                     android:maxLines="1"
-                    android:textSize="12sp"
+                    style="@style/TextSize.Light.XS"
                     tools:text=" - AccountName" />
 
             </RelativeLayout>
@@ -110,19 +109,18 @@
                 <com.garado.aegis.ui.components.light.LightText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:fontFamily="sans-serif-light"
                     tools:text="012 345"
                     android:id="@+id/profile_code"
                     android:layoutDirection="ltr"
-                    android:textSize="34sp"
+                    android:textSize="50sp"
+                    android:fontFamily="@font/public_sans_variable"
+                    android:fontVariationSettings="'wght' 200"
                     android:layout_below="@id/description"
                     android:textColor="?attr/colorCode"
                     android:includeFontPadding="false"
                     android:fallbackLineSpacing="false"
                     android:layout_alignParentStart="true"
-                    android:layout_marginTop="0dp"
-                    android:textStyle="normal|bold"/>
+                    android:layout_marginTop="0dp" />
 
                 <com.garado.aegis.ui.components.light.LightText
                     android:id="@+id/next_profile_code"
@@ -133,8 +131,8 @@
                     android:paddingStart="2dp"
                     android:layout_alignParentStart="true"
                     android:textColor="?attr/colorOnSurfaceDim"
-                    android:textSize="20sp"
-                    android:textStyle="normal|bold"
+                    style="@style/TextSize.Light.XS"
+                    android:textStyle="normal"
                     android:includeFontPadding="false"
                     android:fallbackLineSpacing="false"
                     tools:text="412 643"/>
@@ -149,7 +147,7 @@
                 android:text="@string/copied"
                 android:layout_alignStart="@+id/description"
                 android:layout_below="@id/description"
-                android:textSize="16sp"
+                style="@style/TextSize.Light.XS"
                 android:visibility="invisible" />
         </RelativeLayout>
 
@@ -171,7 +169,7 @@
                 android:focusable="true"
                 android:src="@drawable/ic_outline_refresh_24"
                 app:tint="?attr/colorOnSurface"
-                android:background="?android:attr/selectableItemBackground" />
+                android:background="@null" />
 
             <ImageView
                 android:id="@+id/drag_handle"

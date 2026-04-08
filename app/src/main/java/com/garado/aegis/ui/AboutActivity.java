@@ -71,24 +71,6 @@ public class AboutActivity extends AegisActivity {
             copyToClipboard(getCurrentAppVersion(), R.string.version_copied);
         });
 
-        View btnGithub = findViewById(R.id.btn_github);
-        btnGithub.setOnClickListener(v -> openUrl(GITHUB));
-
-        View btnAlexander = findViewById(R.id.btn_alexander);
-        btnAlexander.setOnClickListener(v -> openUrl(WEBSITE_ALEXANDER));
-
-        View btnMichael = findViewById(R.id.btn_michael);
-        btnMichael.setOnClickListener(v -> openUrl(GITHUB_MICHAEL));
-
-        View btnMail = findViewById(R.id.btn_email);
-        btnMail.setOnClickListener(v -> openMail(MAIL_BEEMDEVELOPMENT));
-
-        View btnWebsite = findViewById(R.id.btn_website);
-        btnWebsite.setOnClickListener(v -> openUrl(WEBSITE_BEEMDEVELOPMENT));
-
-        View btnRate = findViewById(R.id.btn_rate);
-        btnRate.setOnClickListener(v -> openUrl(PLAYSTORE_BEEMDEVELOPMENT ));
-
         View btnChangelog = findViewById(R.id.btn_changelog);
         btnChangelog.setOnClickListener(v -> {
             ChangelogDialog.create()

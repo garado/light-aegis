@@ -61,6 +61,7 @@
     <declare-styleable name="LightSelectorButton">
         <attr name="lightLabel" />
         <attr name="lightValue" />
+        <attr name="lightSelectable" format="boolean" />
     </declare-styleable>
 
     <declare-styleable name="LightContentContainer">

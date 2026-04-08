@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="28dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp">
+
+        <com.garado.aegis.ui.components.light.LightToggleSwitch
+            android:id="@+id/pref_focus_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:lightValue="@string/pref_focus_search" />
+
+        <com.garado.aegis.ui.components.light.LightSelectorButton
+            android:id="@+id/pref_search_behavior"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            app:lightLabel="@string/pref_search_behavior_title" />
+
+        <com.garado.aegis.ui.components.light.LightToggleSwitch
+            android:id="@+id/pref_minimize_on_copy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            app:lightValue="@string/pref_minimize_on_copy_title" />
+
+        <com.garado.aegis.ui.components.light.LightSelectorButton
+            android:id="@+id/pref_copy_behavior"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            app:lightLabel="@string/pref_copy_behavior_title" />
+
+        <com.garado.aegis.ui.components.light.LightToggleSwitch
+            android:id="@+id/pref_haptic_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            app:lightValue="@string/pref_haptic_feedback_title" />
+
+        <com.garado.aegis.ui.components.light.LightToggleSwitch
+            android:id="@+id/pref_groups_multiselect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            app:lightValue="@string/pref_groups_multiselect_title" />
+
+        <com.garado.aegis.ui.components.light.LightToggleSwitch
+            android:id="@+id/pref_highlight_entry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            app:lightValue="@string/pref_highlight_entry_title" />
+
+        <com.garado.aegis.ui.components.light.LightToggleSwitch
+            android:id="@+id/pref_pause_entry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            app:lightValue="@string/pref_pause_entry_title" />
+
+    </LinearLayout>
+
+</ScrollView>

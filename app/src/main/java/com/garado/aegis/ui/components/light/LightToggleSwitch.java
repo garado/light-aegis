@@ -106,6 +106,11 @@ public class LightToggleSwitch extends LinearLayout {
         if (listener != null) listener.onCheckedChanged(checked);
     }
 
+    public void setCheckedSilently(boolean checked) {
+        this.checked = checked;
+        graphic.setChecked(checked);
+    }
+
     public boolean isChecked() {
         return checked;
     }

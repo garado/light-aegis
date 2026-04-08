@@ -5,15 +5,9 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="8dp"
+    android:paddingLeft="34dp"
+    android:paddingRight="28dp"
     app:cardUseCompatPadding="true">
-
-    <com.google.android.material.card.MaterialCardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        app:cardUseCompatPadding="true"
-        style="?attr/materialCardViewOutlinedStyle">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -21,53 +15,27 @@
             android:paddingBottom="8dp"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:background="?attr/selectableItemBackground"
-                android:padding="16dp">
-
-                <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:layout_gravity="center_vertical"
-                    android:src="@mipmap/ic_launcher"
-                    tools:ignore="ContentDescription" />
-
                 <com.garado.aegis.ui.components.light.LightText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:paddingLeft="16dp"
-                    android:paddingRight="16dp"
-                    android:text="@string/app_name_full"
+                    style="@style/TextSize.Light.S"
+                    android:text="Light Authenticator is a redesigned fork of Aegis Authenticator."
                     android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
-
-            </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/btn_app_version"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="?attr/selectableItemBackground"
+                android:background="@null"
                 android:clickable="true"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
                 android:focusable="true">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:importantForAccessibility="no"
-                    android:src="@drawable/ic_outline_info_24" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="28dp"
                     android:orientation="vertical"
                     android:paddingTop="8dp"
                     android:paddingBottom="8dp">
@@ -76,14 +44,15 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/version"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+                        android:textAppearance="@style/TextAppearance.Light.OptionCaption" />
 
                     <com.garado.aegis.ui.components.light.LightText
                         android:id="@+id/app_version"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="0.0.0 (0)"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                        android:textAppearance="@style/TextAppearance.Light.OptionBody"
+                        style="@style/TextSize.Light.S"
                         tools:ignore="HardcodedText" />
                 </LinearLayout>
 
@@ -93,24 +62,15 @@
                 android:id="@+id/btn_changelog"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="?attr/selectableItemBackground"
+                android:background="@null"
                 android:clickable="true"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
                 android:focusable="true">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:importantForAccessibility="no"
-                    android:src="@drawable/ic_outline_history_24" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="28dp"
                     android:orientation="vertical"
                     android:paddingTop="8dp"
                     android:paddingBottom="8dp">
@@ -119,78 +79,47 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/changelog"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
-
-                    <com.garado.aegis.ui.components.light.LightText
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/whats_new"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+                        android:textAppearance="@style/TextAppearance.Light.OptionBody" />
                 </LinearLayout>
             </LinearLayout>
 
+            <!-- github button: hidden because it provides browser access -->
             <LinearLayout
+                android:visibility="gone"
                 android:id="@+id/btn_github"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="?attr/selectableItemBackground"
+                android:background="@null"
                 android:clickable="true"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
                 android:focusable="true">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:importantForAccessibility="no"
-                    android:src="@drawable/ic_outline_code_24" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="28dp"
-                    android:orientation="vertical"
-                    android:paddingTop="8dp"
-                    android:paddingBottom="8dp">
-
                     <com.garado.aegis.ui.components.light.LightText
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/github"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+                        android:textAppearance="@style/TextAppearance.Light.OptionCaption" />
 
                     <com.garado.aegis.ui.components.light.LightText
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/github_description"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-                </LinearLayout>
+                        android:textAppearance="@style/TextAppearance.Light.OptionBody" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/btn_license"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="?attr/selectableItemBackground"
+                android:background="@null"
                 android:clickable="true"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
                 android:focusable="true">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:importantForAccessibility="no"
-                    android:src="@drawable/ic_outline_description_24" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="28dp"
                     android:orientation="vertical"
                     android:paddingTop="8dp"
                     android:paddingBottom="8dp">
@@ -199,110 +128,60 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/license"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+                        android:textAppearance="@style/TextAppearance.Light.OptionCaption" />
 
                     <com.garado.aegis.ui.components.light.LightText
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/license_description"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+                        style="@style/TextSize.Light.S"
+                        android:textAppearance="@style/TextAppearance.Light.OptionBody" />
                 </LinearLayout>
 
             </LinearLayout>
 
+            <!-- hidden; some have browser links -->
             <LinearLayout
+                android:visibility="gone"
                 android:id="@+id/btn_third_party_licenses"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="?attr/selectableItemBackground"
+                android:background="@null"
                 android:clickable="true"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
                 android:focusable="true">
 
-                <ImageView
+                <com.garado.aegis.ui.components.light.LightText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:importantForAccessibility="no"
-                    android:src="@drawable/ic_outline_description_24" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="28dp"
-                    android:orientation="vertical"
-                    android:paddingTop="8dp"
-                    android:paddingBottom="8dp">
-
-                    <com.garado.aegis.ui.components.light.LightText
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/third_party_licenses"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
-
-                    <com.garado.aegis.ui.components.light.LightText
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/third_party_licenses_description"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-                </LinearLayout>
+                    android:text="@string/third_party_licenses"
+                    android:textAppearance="@style/TextAppearance.Light.OptionBody" />
 
             </LinearLayout>
 
         </LinearLayout>
 
-    </com.google.android.material.card.MaterialCardView>
 
-    <com.google.android.material.card.MaterialCardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        app:cardUseCompatPadding="true"
-        style="?attr/materialCardViewOutlinedStyle">
-
+        <!-- beem devs -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="8dp"
             android:orientation="vertical">
-
-            <com.garado.aegis.ui.components.light.LightText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="start|center_vertical"
-                android:paddingLeft="16dp"
-                android:paddingTop="24dp"
-                android:paddingRight="16dp"
-                android:paddingBottom="16dp"
-                android:text="@string/org_name_full"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                android:textColor="?android:textColorSecondary" />
 
             <LinearLayout
                 android:id="@+id/btn_alexander"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="?attr/selectableItemBackground"
-                android:clickable="true"
+                android:background="@null"
                 android:gravity="center_vertical"
                 android:minHeight="@dimen/list_item_height"
                 android:orientation="horizontal"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
                 android:focusable="true">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:importantForAccessibility="no"
-                    android:src="@drawable/ic_outline_person_24" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="28dp"
                     android:orientation="vertical"
                     android:paddingTop="8dp"
                     android:paddingBottom="8dp">
@@ -311,13 +190,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/author_alex"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+                        android:textAppearance="@style/TextAppearance.Light.OptionCaption" />
 
                     <com.garado.aegis.ui.components.light.LightText
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/country_netherlands"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+                        android:textAppearance="@style/TextAppearance.Light.OptionBody" />
 
                 </LinearLayout>
 
@@ -327,25 +206,15 @@
                 android:id="@+id/btn_michael"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="?attr/selectableItemBackground"
-                android:clickable="true"
+                android:background="@null"
                 android:gravity="center_vertical"
                 android:minHeight="@dimen/list_item_height"
                 android:orientation="horizontal"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
                 android:focusable="true">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:importantForAccessibility="no"
-                    android:src="@drawable/ic_outline_person_24" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="28dp"
                     android:orientation="vertical"
                     android:paddingTop="8dp"
                     android:paddingBottom="8dp">
@@ -354,150 +223,17 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/author_michael"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+                        android:textAppearance="@style/TextAppearance.Light.OptionCaption" />
 
                     <com.garado.aegis.ui.components.light.LightText
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/country_netherlands"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/btn_email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="?attr/selectableItemBackground"
-                android:clickable="true"
-                android:gravity="center_vertical"
-                android:minHeight="@dimen/list_item_height"
-                android:orientation="horizontal"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
-                android:focusable="true">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:importantForAccessibility="no"
-                    android:src="@drawable/ic_outline_mail_24" />
-
-                <com.garado.aegis.ui.components.light.LightText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="28dp"
-                    android:paddingTop="8dp"
-                    android:paddingBottom="8dp"
-                    android:text="@string/email_us"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/btn_website"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="?attr/selectableItemBackground"
-                android:clickable="true"
-                android:gravity="center_vertical"
-                android:minHeight="@dimen/list_item_height"
-                android:orientation="horizontal"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
-                android:focusable="true">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:importantForAccessibility="no"
-                    android:src="@drawable/ic_outline_public_24" />
-
-                <com.garado.aegis.ui.components.light.LightText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="28dp"
-                    android:paddingTop="8dp"
-                    android:paddingBottom="8dp"
-                    android:text="@string/visit_website"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-    </com.google.android.material.card.MaterialCardView>
-
-    <com.google.android.material.card.MaterialCardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        app:cardUseCompatPadding="true"
-        style="?attr/materialCardViewOutlinedStyle">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingBottom="8dp"
-            android:orientation="vertical">
-
-            <com.garado.aegis.ui.components.light.LightText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="start|center_vertical"
-                android:paddingLeft="16dp"
-                android:paddingTop="24dp"
-                android:paddingRight="16dp"
-                android:paddingBottom="16dp"
-                android:text="@string/about_support"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                android:textColor="?android:textColorSecondary" />
-
-            <LinearLayout
-                android:id="@+id/btn_rate"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="?attr/selectableItemBackground"
-                android:clickable="true"
-                android:gravity="center_vertical"
-                android:minHeight="@dimen/list_item_height"
-                android:orientation="horizontal"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
-                android:focusable="true">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:importantForAccessibility="no"
-                    android:src="@drawable/ic_outline_star_24" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="28dp"
-                    android:orientation="vertical"
-                    android:paddingTop="8dp"
-                    android:paddingBottom="8dp">
-
-                    <com.garado.aegis.ui.components.light.LightText
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/support_rate"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
-
-                    <com.garado.aegis.ui.components.light.LightText
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/support_rate_description"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+                        android:textAppearance="@style/TextAppearance.Light.OptionBody" />
 
                 </LinearLayout>
 
             </LinearLayout>
 
         </LinearLayout>
-    </com.google.android.material.card.MaterialCardView>
-
 </LinearLayout>

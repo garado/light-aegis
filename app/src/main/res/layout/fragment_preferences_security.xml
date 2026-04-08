@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="28dp"
+        android:paddingBottom="16dp">
+
+        <com.garado.aegis.ui.components.light.LightToggleSwitch
+            android:id="@+id/pref_encryption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:lightValue="@string/pref_encryption_title" />
+
+        <com.garado.aegis.ui.components.light.LightButton
+            android:id="@+id/pref_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/pref_set_password_title" />
+
+        <com.garado.aegis.ui.components.light.LightToggleSwitch
+            android:id="@+id/pref_biometrics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            app:lightValue="@string/pref_biometrics_title" />
+
+        <com.garado.aegis.ui.components.light.LightSelectorButton
+            android:id="@+id/pref_password_reminder_freq"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            app:lightLabel="@string/pref_password_reminder_title" />
+
+        <com.garado.aegis.ui.components.light.LightSelectorButton
+            android:id="@+id/pref_auto_lock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            app:lightLabel="@string/pref_auto_lock_title" />
+
+        <com.garado.aegis.ui.components.light.LightToggleSwitch
+            android:id="@+id/pref_pin_keyboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            app:lightValue="@string/pref_pin_keyboard_title" />
+
+        <LinearLayout
+            android:id="@+id/group_backup_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.garado.aegis.ui.components.light.LightToggleSwitch
+                android:id="@+id/pref_backup_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                app:lightValue="@string/pref_backup_password_title" />
+
+            <com.garado.aegis.ui.components.light.LightButton
+                android:id="@+id/pref_backup_password_change"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:text="@string/pref_backup_password_change_title" />
+
+        </LinearLayout>
+
+        <com.garado.aegis.ui.components.light.LightToggleSwitch
+            android:id="@+id/pref_secure_screen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            app:lightValue="@string/pref_secure_screen_title" />
+
+        <com.garado.aegis.ui.components.light.LightToggleSwitch
+            android:id="@+id/pref_tap_to_reveal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            app:lightValue="@string/pref_tap_to_reveal_title" />
+
+        <com.garado.aegis.ui.components.light.LightSelectorButton
+            android:id="@+id/pref_tap_to_reveal_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            app:lightLabel="@string/pref_tap_to_reveal_time_title" />
+
+        <com.garado.aegis.ui.components.light.LightToggleSwitch
+            android:id="@+id/pref_panic_trigger"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            app:lightValue="@string/pref_panic_trigger_title" />
+
+    </LinearLayout>
+
+</ScrollView>

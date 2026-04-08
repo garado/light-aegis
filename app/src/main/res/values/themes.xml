@@ -7,8 +7,11 @@
     </style>
 
     <style name="Base.Theme.Aegis.Light" parent="Theme.Material3.Light">
+        <item name="android:scrollbarThumbVertical">@drawable/scrollbar_thumb</item>
+        <item name="android:scrollbarTrackVertical">@drawable/scrollbar_track</item>
+        <item name="android:scrollbarSize">8dp</item>
         <item name="android:fontFamily">@font/public_sans_regular</item>
-        <item name="fontFamily">@font/public_sans_regular</item>   
+        <item name="fontFamily">@font/public_sans_regular</item>
 
         <!-- Material colors -->
         <item name="colorPrimary">@color/md_theme_light_primary</item>
@@ -78,11 +81,15 @@
         <item name="windowActionModeOverlay">true</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="colorControlHighlight">@android:color/transparent</item>
     </style>
 
     <style name="Base.Theme.Aegis.Dark" parent="Theme.Material3.Dark">
+        <item name="android:scrollbarThumbVertical">@drawable/scrollbar_thumb_dark</item>
+        <item name="android:scrollbarTrackVertical">@drawable/scrollbar_track_dark</item>
+        <item name="android:scrollbarSize">8dp</item>
         <item name="android:fontFamily">@font/public_sans_regular</item>
-        <item name="fontFamily">@font/public_sans_regular</item>   
+        <item name="fontFamily">@font/public_sans_regular</item>
 
         <!-- Material colors -->
         <item name="colorPrimary">@color/md_theme_dark_primary</item>
@@ -221,6 +228,26 @@
         <item name="android:divider">@null</item>
         <item name="android:dividerHeight">0dp</item>
     </style>
+
+    <!-- ============================================================ -->
+    <!-- Light OS redesign                                            -->
+    <!-- ============================================================ -->
+    
+    <style name="TextSize.Light.XL" parent=""> <item name="android:textSize">30sp</item> </style>
+    <style name="TextSize.Light.L" parent="">  <item name="android:textSize">26sp</item> </style>
+    <style name="TextSize.Light.M" parent="">  <item name="android:textSize">22sp</item> </style>
+    <style name="TextSize.Light.S" parent="">  <item name="android:textSize">18sp</item> </style>
+    <style name="TextSize.Light.XS" parent=""> <item name="android:textSize">15sp</item> </style>
+
+    <style name="TextAppearance.Light.OptionCaption" parent="TextSize.Light.XS">
+        <item name="android:fontFamily">@font/public_sans_regular</item>
+    </style>
+    
+    <style name="TextAppearance.Light.OptionBody" parent="TextSize.Light.M">
+        <item name="android:fontFamily">@font/public_sans_regular</item>
+    </style>
+
+    <!-- ============================================================ -->
 
     <style name="TextAppearance.Aegis.Toolbar.Title" parent="@style/TextAppearance.Material3.TitleLarge">
         <item name="android:textSize">16sp</item>

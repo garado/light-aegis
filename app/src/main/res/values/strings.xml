@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name" translatable="false">Aegis</string>
-    <string name="app_name_full" translatable="false">Aegis Authenticator</string>
+    <string name="app_name_full" translatable="false">Light Authenticator</string>
     <string name="org_name_full" translatable="false">Beem Development</string>
     <string name="action_settings">Settings</string>
     <string name="action_about">About</string>
@@ -32,7 +32,7 @@
     <string name="pref_section_security_summary">Configure encryption, biometric unlock, auto lock and other security settings.</string>
     <string name="pref_section_import_export_title">Import &amp; Export</string>
     <string name="pref_section_import_export_summary">Import backups of Aegis or other authenticator apps. Create manual exports of your Aegis vault.</string>
-    <string name="pref_section_audit_log_title">Audit log</string>
+    <string name="pref_section_audit_log_title">Audit Log</string>
     <string name="pref_section_audit_log_summary">Find a list of all reported important events that happened within the app.</string>
     <string name="pref_section_backups_title">Backups</string>
     <string name="pref_section_backups_summary">Set up automatic backups to a location of your choosing or enable participation in Android\'s cloud backup system.</string>
@@ -442,7 +442,7 @@
     <string name="github" translatable="false">GitHub</string>
     <string name="github_description">Source code, issues and information</string>
     <string name="license">License</string>
-    <string name="license_description">Aegis Authenticator is licensed under GPLv3</string>
+    <string name="license_description">Light Authenticator is licensed under GPLv3</string>
     <string name="third_party_licenses">Third-party licenses</string>
     <string name="third_party_licenses_description">Licenses of the third-party libraries Aegis uses</string>
     <string name="author_alex" translatable="false">Alexander Bakker</string>

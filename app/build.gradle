@@ -71,7 +71,7 @@ android {
         debug {
             applicationIdSuffix ".debug"
             manifestPlaceholders = [
-                title: "AegisDev",
+                title: "Light Authenticator",
                 iconName: "ic_launcher_debug",
                 fileProviderAuthority: "${fileProviderAuthorityDebug}"
             ]

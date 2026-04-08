@@ -12,7 +12,6 @@ import androidx.preference.PreferenceFragmentCompat;
 import com.garado.aegis.R;
 import com.garado.aegis.ui.fragments.preferences.AppearancePreferencesFragment;
 import com.garado.aegis.ui.fragments.preferences.MainPreferencesFragment;
-import com.garado.aegis.ui.fragments.preferences.PreferencesFragment;
 import com.garado.aegis.helpers.ViewHelper;
 
 public class PreferencesActivity extends AegisActivity implements
@@ -45,7 +44,7 @@ public class PreferencesActivity extends AegisActivity implements
                     .replace(R.id.content, _fragment)
                     .commit();
 
-            PreferencesFragment requestedFragment = getRequestedFragment();
+            Fragment requestedFragment = getRequestedFragment();
             if (requestedFragment != null) {
                 _fragment = requestedFragment;
                 showFragment(_fragment);
@@ -90,15 +89,14 @@ public class PreferencesActivity extends AegisActivity implements
 
     private void showFragment(Fragment fragment) {
         getSupportFragmentManager().beginTransaction()
-                .setCustomAnimations(R.anim.slide_in_right, R.anim.slide_out_left, R.anim.slide_in_left, R.anim.slide_out_right)
                 .replace(R.id.content, fragment)
                 .addToBackStack(null)
                 .commit();
     }
 
     @SuppressWarnings("unchecked")
-    private PreferencesFragment getRequestedFragment() {
-        Class<? extends PreferencesFragment> fragmentType = (Class<? extends PreferencesFragment>) getIntent().getSerializableExtra("fragment");
+    private Fragment getRequestedFragment() {
+        Class<? extends Fragment> fragmentType = (Class<? extends Fragment>) getIntent().getSerializableExtra("fragment");
         if (fragmentType == null) {
             return null;
         }

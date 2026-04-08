@@ -9,9 +9,10 @@
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="match_parent"
         android:layout_height="4dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="10dp"
         android:progressDrawable="@drawable/progress_horizontal"
         android:id="@+id/progressBar"
-        android:visibility="gone"
         android:max="5000"/>
 
     <androidx.recyclerview.widget.RecyclerView
@@ -59,4 +60,5 @@
         </LinearLayout>
 
     </LinearLayout>
+
 </LinearLayout>

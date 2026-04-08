@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="28dp"
+        android:paddingBottom="16dp">
+
+        <com.garado.aegis.ui.components.light.LightSelectorButton
+            android:id="@+id/pref_dark_mode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:lightLabel="@string/pref_select_theme_title" />
+
+        <!-- hidden: only support light/dark theme. -->
+        <com.garado.aegis.ui.components.light.LightToggleSwitch
+            android:visibility="gone"
+            android:id="@+id/pref_dynamic_colors"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            app:lightValue="@string/pref_dynamic_colors_title" />
+
+        <com.garado.aegis.ui.components.light.LightSelectorButton
+            android:id="@+id/pref_lang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            app:lightLabel="@string/pref_lang_title" />
+
+        <!-- hidden: i want users to only use Normal mode -->
+        <com.garado.aegis.ui.components.light.LightSelectorButton
+            android:visibility="gone"
+            android:id="@+id/pref_view_mode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            app:lightLabel="@string/pref_view_mode_title" />
+
+        <!-- hidden: not very light -->
+        <com.garado.aegis.ui.components.light.LightToggleSwitch
+            android:visibility="gone"
+            android:id="@+id/pref_show_icons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            app:lightValue="@string/pref_show_icons_title" />
+
+        <com.garado.aegis.ui.components.light.LightToggleSwitch
+            android:id="@+id/pref_show_next_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            app:lightValue="@string/pref_show_next_code_title" />
+
+        <com.garado.aegis.ui.components.light.LightToggleSwitch
+            android:id="@+id/pref_expiration_state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            app:lightValue="@string/pref_expiration_state_title" />
+
+        <com.garado.aegis.ui.components.light.LightSelectorButton
+            android:id="@+id/pref_code_group_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            app:lightLabel="@string/pref_code_group_size_title" />
+
+        <com.garado.aegis.ui.components.light.LightSelectorButton
+            android:id="@+id/pref_account_name_position"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            app:lightLabel="@string/pref_account_name_position_title" />
+
+        <com.garado.aegis.ui.components.light.LightToggleSwitch
+            android:id="@+id/pref_shared_issuer_account_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            app:lightValue="@string/pref_shared_issuer_account_name_title" />
+
+        <com.garado.aegis.ui.components.light.LightButton
+            android:id="@+id/pref_groups"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/preference_manage_groups" />
+
+        <com.garado.aegis.ui.components.light.LightButton
+            android:id="@+id/pref_reset_usage_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/preference_reset_usage_count" />
+
+    </LinearLayout>
+
+</ScrollView>

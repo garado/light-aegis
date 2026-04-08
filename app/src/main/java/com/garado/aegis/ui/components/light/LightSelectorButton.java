@@ -20,6 +20,7 @@ public class LightSelectorButton extends LinearLayout {
     private final LightText labelView;
     private final LightText valueView;
     private OnClickListener onClickListener;
+    private boolean selectable = true;
 
     public LightSelectorButton(Context context) {
         this(context, null);
@@ -35,6 +36,7 @@ public class LightSelectorButton extends LinearLayout {
         setOrientation(VERTICAL);
         setClickable(true);
         setFocusable(true);
+        setBackground(null);
 
         labelView = new LightText(context);
         labelView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
@@ -59,6 +61,7 @@ public class LightSelectorButton extends LinearLayout {
             if (label != null) setLabel(label);
             String value = a.getString(R.styleable.LightSelectorButton_lightValue);
             if (value != null) setValue(value);
+            selectable = a.getBoolean(R.styleable.LightSelectorButton_lightSelectable, true);
             a.recycle();
         }
     }
@@ -71,10 +74,16 @@ public class LightSelectorButton extends LinearLayout {
         valueView.setText(value);
     }
 
+    public void setSelectable(boolean selectable) {
+        this.selectable = selectable;
+        if (!selectable) setSelected(false);
+    }
+
     @Override
     public void setSelected(boolean selected) {
         super.setSelected(selected);
-        if (selected) {
+        boolean underline = selected && selectable;
+        if (underline) {
             valueView.setPaintFlags(valueView.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
         } else {
             valueView.setPaintFlags(valueView.getPaintFlags() & ~Paint.UNDERLINE_TEXT_FLAG);
